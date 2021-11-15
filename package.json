@@ -5,8 +5,12 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
     "gulp-sass": "^5.0.0",
+    "gulp-watch": "^5.0.1",
     "sass": "^1.43.4"
   },
   "scripts": {
