@@ -45,6 +45,7 @@ input#search-bar {
   font-size: 1rem;
   border: 1px solid #d0cfce;
   outline: none;
+  background-color: darkgrey;
 }
 .search-icon {
   position: relative;
