@@ -18,39 +18,62 @@
   </head>
 
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <i class="fas fa-box"></i>
-          </li>
-          <li>
-            <a href="">Newsbox</a>
-          </li>
-          <li>
-            <i class="fas fa-cog"></i>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <!-- header -->
-    <main>
-      <form class="search-container">
-        <input type="text" id="search-bar" placeholder="Search news" />
-        <i class="fas fa-search search-icon"></i>
-      </form>
-      <section>
-        <article></article>
-        <!-- article -->
-      </section>
-      <!-- section -->
-    </main>
-    <!-- main -->
-    <footer></footer>
-    <!-- footer -->
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <!-- axios link -->
-    <script src="js/script.js"></script>
-    <!-- <script src="js/gulpfile.js"></script> -->
+    <div id="wrapper">
+      <header>
+        <nav>
+          <ul>
+            <li>
+              <i class="fas fa-box"></i>
+            </li>
+            <li>
+              <a href="">Newsbox</a>
+            </li>
+            <li>
+              <i class="fas fa-cog"></i>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!-- header -->
+      <main>
+        <form class="search-container">
+          <input type="text" id="search-bar" placeholder="Search news" />
+          <i class="fas fa-search search-icon"></i>
+        </form>
+        <section>
+          <article>
+            <div class="health-category">
+              <i class="fas fa-box"></i>
+              <h3 class="article-heading">HEALTH</h3>
+            </div>
+            <div><i class="fas fa-angle-down angle-icon"></i></div>
+          </article>
+          <article class="article-about-surfing">
+            <h3 class="title">Headline</h3>
+            <p class="desc">
+              Surfing is a surface water sport in which the wave rider, referred
+              to as...
+            </p>
+            <div style="height: 100px; background-color: #87bcbf"></div>
+          </article>
+          <article class="article-about-surfing1">
+            <h3>Headline</h3>
+            <p>
+              Surfing is a surface water sport in which the wave rider, referred
+              to as...
+            </p>
+          </article>
+          <!-- article -->
+        </section>
+        <!-- section -->
+      </main>
+      <!-- main -->
+      <footer></footer>
+      <!-- footer -->
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <!-- axios link -->
+      <script src="js/script.js"></script>
+      <!-- <script src="js/gulpfile.js"></script> -->
+    </div>
   </body>
 </html>

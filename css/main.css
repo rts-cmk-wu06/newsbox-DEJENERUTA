@@ -1,0 +1,11 @@
+header {
+  width: 100%;
+  border-bottom: 1px solid #334856;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+header nav li {
+  list-style: none;
+}

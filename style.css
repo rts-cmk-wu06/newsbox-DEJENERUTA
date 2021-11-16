@@ -8,6 +8,10 @@ img {
   height: auto;
   display: block;
 }
+#wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 header {
   width: 100%;
 }
@@ -22,10 +26,14 @@ nav ul {
 }
 nav ul li {
   list-style: none;
-  color: #1b1c20;
+  color: #324755;
 }
 nav ul li a {
   text-decoration: none;
+  color: #324755;
+}
+main {
+  width: 100%;
 }
 form {
   width: 100%;
@@ -33,9 +41,8 @@ form {
   border-bottom: 1px solid gray;
 }
 .search-container {
-  width: 490px;
   display: block;
-  margin-left: 10%;
+  /* margin-left: 20%; */
 }
 input#search-bar {
   margin: 0 auto;
@@ -46,6 +53,7 @@ input#search-bar {
   border: 1px solid #d0cfce;
   outline: none;
   background-color: darkgrey;
+  border-radius: 5px;
 }
 .search-icon {
   position: relative;
@@ -54,4 +62,42 @@ input#search-bar {
   height: 75px;
   top: -30px;
   right: -45px;
+}
+article {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  border-bottom: 1px solid gray;
+}
+.article-heading,
+.angle-icon {
+  color: #334856;
+}
+.health-category {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.health-category i {
+  color: #d97d54;
+}
+.angle-icon {
+  justify-content: flex-end;
+}
+.article-about-surfing {
+  width: 100%;
+  display: block;
+  padding: 30px;
+  border-bottom: 1px solid gray;
+}
+.title,
+.desc {
+  margin-left: 30px;
+}
+.article-about-surfing1 {
+  width: 100%;
+  display: block;
+  padding: 30px;
+  border-bottom: 1px solid gray;
 }
