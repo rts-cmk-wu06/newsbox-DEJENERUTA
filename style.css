@@ -21,7 +21,7 @@ nav {
 }
 nav ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 30px;
 }
 nav ul li {
@@ -42,7 +42,6 @@ form {
 }
 .search-container {
   display: block;
-  /* margin-left: 20%; */
 }
 input#search-bar {
   margin: 0 auto;
@@ -100,4 +99,91 @@ article {
   display: block;
   padding: 30px;
   border-bottom: 1px solid gray;
+}
+/* setting page */
+html,
+body,
+main {
+  height: 100%;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #eceff0;
+}
+.main-toggle-container {
+  background-color: #ffffff;
+  width: 340px;
+  border-radius: 10px;
+  border: inherit;
+}
+.setting-title {
+  color: #87bcbf;
+}
+.setting-sub-title {
+  color: #707070;
+}
+.toggle-button-wrapper {
+  max-width: 600px;
+  width: 100%;
+  border: 1px solid hsl(0, 0%, 75%);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-button-wrapper input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-wrapper {
+  width: 60px;
+  border: 1px solid hsl(0, 0%, 75%);
+  background-color: hsl(0, 0%, 90%);
+  box-shadow: 0 2px 5px hsla(0, 0%, 0%, 20%);
+  height: 32px;
+  border-radius: 16px;
+  position: relative;
+}
+
+.toggle {
+  width: 30px;
+  height: 30px;
+  border: 1px solid hsl(0, 0%, 65%);
+  background-color: hsl(0, 0%, 75%);
+  box-shadow: 0 2px 5px hsla(0, 0%, 0%, 50%);
+  border-radius: 15px;
+  position: absolute;
+  left: 0;
+  transition: left 0.25s;
+}
+
+input[type="checkbox"]:checked + .toggle-wrapper > .toggle {
+  left: calc(100% - 30px);
+}
+
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+body.dark .toggle-button-wrapper {
+  border: 1px solid hsl(0, 0%, 25%);
+}
+
+body.dark .toggle-wrapper {
+  border: 1px solid hsl(0, 0%, 25%);
+  background-color: hsl(0, 0%, 10%);
+  box-shadow: 0 2px 5px hsla(0, 0%, 100%, 20%);
+}
+
+body.dark .toggle {
+  border: 1px solid hsl(0, 0%, 35%);
+  background-color: hsl(0, 0%, 25%);
+  box-shadow: 0 2px 5px hsla(0, 0%, 100%, 50%);
 }

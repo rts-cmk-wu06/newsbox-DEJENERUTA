@@ -1,6 +1,6 @@
 axios
   .get(
-    "https://api.nytimes.com/svc/topstories/v2/sports.json?api-key=cLmzjWMAwmrqrU4DGnsDKAB1xXI28GvF"
+    "https://api.nytimes.com/svc/topstories/v2/home.json?api-key=cLmzjWMAwmrqrU4DGnsDKAB1xXI28GvF"
   )
 
   .then((response) => {
