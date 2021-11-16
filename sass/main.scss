@@ -1,27 +1,17 @@
 @import "fonts";
 @import "colors";
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+
 header {
   width: 100%;
   border-bottom: 1px solid #334856;
-}
-nav {
-  ul {
-    display: flex;
-    justify-content: space-evenly;
-    text-decoration: none;
-  }
-  li a {
-    color: red;
-    list-style: none;
+  nav {
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    li {
+      $primary-color: #1b1c20;
+      list-style: none;
+    }
   }
 }
