@@ -3,6 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+html,
+body,
+main {
+  height: 100%;
+}
 img {
   width: 100%;
   height: auto;
@@ -101,12 +106,22 @@ article {
   border-bottom: 1px solid gray;
 }
 /* setting page */
-html,
-body,
-main {
-  height: 100%;
-}
 
+.setting {
+  color: #324755;
+  font-size: 18px;
+  font-weight: bold;
+}
+.setting-title {
+  color: #87bcbf;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+.setting-sub-title {
+  color: #707070;
+  font-size: 20px;
+}
 main {
   display: flex;
   align-items: center;
@@ -114,6 +129,8 @@ main {
   flex-direction: column;
   gap: 20px;
   background-color: #eceff0;
+  width: 375px;
+  margin: 0 auto;
 }
 .main-toggle-container {
   background-color: #ffffff;
@@ -121,12 +138,7 @@ main {
   border-radius: 10px;
   border: inherit;
 }
-.setting-title {
-  color: #87bcbf;
-}
-.setting-sub-title {
-  color: #707070;
-}
+
 .toggle-button-wrapper {
   max-width: 600px;
   width: 100%;
@@ -136,7 +148,11 @@ main {
   justify-content: space-between;
   align-items: center;
 }
-
+span {
+  color: #334856;
+  font-size: 15px;
+  font-weight: bold;
+}
 .toggle-button-wrapper input[type="checkbox"] {
   display: none;
 }
@@ -150,12 +166,15 @@ main {
   border-radius: 16px;
   position: relative;
 }
+.colored {
+  background-color: #87bcbf;
+}
 
 .toggle {
   width: 30px;
   height: 30px;
   border: 1px solid hsl(0, 0%, 65%);
-  background-color: hsl(0, 0%, 75%);
+  background-color: #ffffff;
   box-shadow: 0 2px 5px hsla(0, 0%, 0%, 50%);
   border-radius: 15px;
   position: absolute;
@@ -186,4 +205,23 @@ body.dark .toggle {
   border: 1px solid hsl(0, 0%, 35%);
   background-color: hsl(0, 0%, 25%);
   box-shadow: 0 2px 5px hsla(0, 0%, 100%, 50%);
+}
+button {
+  width: 200px;
+  height: 50px;
+  border-radius: 30px;
+  margin: 30px;
+  background-color: #c8d1d3;
+  border: none;
+}
+.toggle-txt {
+  font-size: 14px;
+  color: #334856;
+  justify-content: center;
+  align-items: center;
+}
+.version {
+  margin-bottom: 20px;
+  color: #6e8ca0;
+  font-size: 14px;
 }

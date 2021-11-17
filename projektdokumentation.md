@@ -1,6 +1,6 @@
 # Projektdokumentation
 
-#### Navn:
+#### Navn: Dejene Daba
 
 ##### Hold: 1146521c105 / WU05
 
