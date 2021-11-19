@@ -15,7 +15,6 @@ img {
 }
 #wrapper {
   max-width: 1200px;
-  margin: 0 auto;
 }
 header {
   width: 100%;
@@ -98,6 +97,12 @@ article {
 .title,
 .desc {
   margin-left: 30px;
+}
+.swipe {
+  display: none;
+}
+.archive-swipe {
+  display: none;
 }
 .article-about-surfing1 {
   width: 100%;
