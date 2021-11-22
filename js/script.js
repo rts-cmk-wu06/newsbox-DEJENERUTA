@@ -2,7 +2,7 @@ if (localStorage.getItem("categorySettings") === null) {
   localStorage.setItem(
     "categorySettings",
     JSON.stringify({
-      europe: true,
+      world: true,
       health: true,
       business: true,
       sport: true,
@@ -11,8 +11,30 @@ if (localStorage.getItem("categorySettings") === null) {
   );
 }
 const categorySettings = JSON.parse(localStorage.getItem("categorySettings"));
-console.log(categorySettings);
-const array = ["HEALTH", "SPORTS", "TRAVEL"];
+if (localStorage.getItem("darkModeSetting") === null) {
+  localStorage.setItem("darkModeSetting", "off");
+}
+let darkModeSetting = localStorage.getItem("darkModeSetting") === "on";
+if (darkModeSetting) {
+  document.querySelector("body").classList.add("dark");
+}
+
+const array = [];
+if (categorySettings.world) {
+  array.push("WORLD");
+}
+if (categorySettings.health) {
+  array.push("HEALTH");
+}
+if (categorySettings.business) {
+  array.push("BUSINESS");
+}
+if (categorySettings.sport) {
+  array.push("SPORTS");
+}
+if (categorySettings.travel) {
+  array.push("TRAVEL");
+}
 array.forEach((Element) => {
   let section = document.createElement("section");
   document.querySelector("#main").append(section);

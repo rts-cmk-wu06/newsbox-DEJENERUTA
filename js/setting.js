@@ -2,7 +2,7 @@ if (localStorage.getItem("categorySettings") === null) {
   localStorage.setItem(
     "categorySettings",
     JSON.stringify({
-      europe: true,
+      world: true,
       health: true,
       business: true,
       sport: true,
@@ -11,9 +11,14 @@ if (localStorage.getItem("categorySettings") === null) {
   );
 }
 const categorySettings = JSON.parse(localStorage.getItem("categorySettings"));
-console.log(categorySettings);
-document.getElementById("toggle-button-europe").checked =
-  categorySettings.europe;
+if (localStorage.getItem("darkModeSetting") === null) {
+  localStorage.setItem("darkModeSetting", "off");
+}
+let darkModeSetting = localStorage.getItem("darkModeSetting") === "on";
+if (darkModeSetting) {
+  document.querySelector("body").classList.add("dark");
+}
+document.getElementById("toggle-button-world").checked = categorySettings.world;
 document.getElementById("toggle-button-health").checked =
   categorySettings.health;
 document.getElementById("toggle-button-business").checked =
@@ -22,9 +27,9 @@ document.getElementById("toggle-button-sport").checked = categorySettings.sport;
 document.getElementById("toggle-button-travel").checked =
   categorySettings.travel;
 document
-  .getElementById("toggle-button-europe")
+  .getElementById("toggle-button-world")
   .addEventListener("click", (event) => {
-    categorySettings.europe = !categorySettings.europe;
+    categorySettings.world = !categorySettings.world;
     localStorage.setItem("categorySettings", JSON.stringify(categorySettings));
   });
 
@@ -59,5 +64,12 @@ document
 document
   .getElementById("toggle-button-dark-mode")
   .addEventListener("click", (event) => {
-    document.querySelector("body").classList.toggle("dark");
+    darkModeSetting = !darkModeSetting;
+    if (darkModeSetting) {
+      localStorage.setItem("darkModeSetting", "on");
+      document.querySelector("body").classList.add("dark");
+    } else {
+      localStorage.setItem("darkModeSetting", "off");
+      document.querySelector("body").classList.remove("dark");
+    }
   });
