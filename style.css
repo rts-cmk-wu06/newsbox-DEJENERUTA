@@ -66,8 +66,17 @@ input#search-bar {
   top: -30px;
   right: -45px;
 }
-article {
+.card {
+  height: 75px;
+  display: grid;
+  grid-template-columns: 1fr 40%;
+  grid-auto-rows: 75px;
+  transition: height 0.15s ease;
+  overflow: hidden;
+}
+.collaps {
   width: 100%;
+  height: 0;
   display: flex;
   justify-content: space-between;
   padding: 30px;
@@ -90,16 +99,33 @@ article {
 }
 .article-about-surfing {
   width: 100%;
-  display: block;
-  padding: 30px;
   border-bottom: 1px solid gray;
 }
 .title,
 .desc {
   margin-left: 30px;
 }
-.swipe {
-  display: none;
+.swipeItem {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  transition: 0.15s;
+}
+.deleteItem {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  height: 100%;
+  justify-content: center;
+}
+.deleteItem i {
+  align-self: center;
+  justify-content: center;
+  display: flex;
+  padding: 30px;
+  color: #fff;
 }
 .archive-swipe {
   display: none;
@@ -171,7 +197,7 @@ span {
   border-radius: 16px;
   position: relative;
 }
-.colored {
+input[type="checkbox"]:checked + .toggle-wrapper {
   background-color: #87bcbf;
 }
 

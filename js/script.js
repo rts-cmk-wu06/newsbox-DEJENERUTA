@@ -1,14 +1,28 @@
-const array = ["health", "sports", "travel"];
+if (localStorage.getItem("categorySettings") === null) {
+  localStorage.setItem(
+    "categorySettings",
+    JSON.stringify({
+      europe: true,
+      health: true,
+      business: true,
+      sport: true,
+      travel: true,
+    })
+  );
+}
+const categorySettings = JSON.parse(localStorage.getItem("categorySettings"));
+console.log(categorySettings);
+const array = ["HEALTH", "SPORTS", "TRAVEL"];
 array.forEach((Element) => {
   let section = document.createElement("section");
   document.querySelector("#main").append(section);
   section.innerHTML += `
-  <article>
+  <article class="collaps">
     <div class="health-category">
-      <i class="fas fa-box"></i>
+       <i class="fas fa-box"></i> 
        <h3 class="article-heading">${Element}</h3> 
     </div>
-    <div><i class="fas fa-angle-down angle-icon"></i></div>
+    <div class="fold"><i class="fas fa-angle-down angle-icon  fa-2x"></i></div>
   </article> 
  
  `;
@@ -19,16 +33,21 @@ array.forEach((Element) => {
 
     .then((response) => {
       const data = response.data;
-      console.log(data.results[0].abstract);
+      console.log(data.results);
       data.results.forEach((article) => {
-        section.innerHTML += ` <article class="article-about-surfing">
-<h3 class="title">Headline</h3>
-<p class="desc">
-  Surfing is a surface water sport in which the wave rider, referred
-  to as...
-</p>
- 
+        if (article.section != "admin") {
+          section.innerHTML += ` <article class="article-about-surfing card">
+ <div class="swipeItem">
+     <h3 class="title">${article.title}</h3>
+   <p class="desc">
+    ${article.abstract}
+    </p>
+</div>
+<div class="deleteItem" style="height: 100px; background-color: #87bcbf">
+ <i class="fas fa-box"></i>
+</div> 
 </article>`;
+        }
       });
     });
 });
