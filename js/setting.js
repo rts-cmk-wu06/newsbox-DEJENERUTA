@@ -1,31 +1,59 @@
+if (localStorage.getItem("categorySettings") === null) {
+  localStorage.setItem(
+    "categorySettings",
+    JSON.stringify({
+      europe: true,
+      health: true,
+      business: true,
+      sport: true,
+      travel: true,
+    })
+  );
+}
+const categorySettings = JSON.parse(localStorage.getItem("categorySettings"));
+console.log(categorySettings);
+document.getElementById("toggle-button-europe").checked =
+  categorySettings.europe;
+document.getElementById("toggle-button-health").checked =
+  categorySettings.health;
+document.getElementById("toggle-button-business").checked =
+  categorySettings.business;
+document.getElementById("toggle-button-sport").checked = categorySettings.sport;
+document.getElementById("toggle-button-travel").checked =
+  categorySettings.travel;
 document
-  .getElementById("toggle-button-1")
+  .getElementById("toggle-button-europe")
   .addEventListener("click", (event) => {
-    console.log("Toggle button 1 was toggled", event.target.checked);
+    categorySettings.europe = !categorySettings.europe;
+    localStorage.setItem("categorySettings", JSON.stringify(categorySettings));
   });
 
 document
-  .getElementById("toggle-button-2")
+  .getElementById("toggle-button-health")
   .addEventListener("click", (event) => {
-    console.log("Toggle button 2 was toggled", event.target.checked);
+    categorySettings.health = !categorySettings.health;
+    localStorage.setItem("categorySettings", JSON.stringify(categorySettings));
   });
 
 document
-  .getElementById("toggle-button-3")
+  .getElementById("toggle-button-sport")
   .addEventListener("click", (event) => {
-    console.log("Toggle button 3 was toggled", event.target.checked);
+    categorySettings.sport = !categorySettings.sport;
+    localStorage.setItem("categorySettings", JSON.stringify(categorySettings));
   });
 
 document
-  .getElementById("toggle-button-4")
+  .getElementById("toggle-button-business")
   .addEventListener("click", (event) => {
-    console.log("Toggle button 4 was toggled", event.target.checked);
+    categorySettings.business = !categorySettings.business;
+    localStorage.setItem("categorySettings", JSON.stringify(categorySettings));
   });
 
 document
-  .getElementById("toggle-button-5")
+  .getElementById("toggle-button-travel")
   .addEventListener("click", (event) => {
-    console.log("Toggle button 5 was toggled", event.target.checked);
+    categorySettings.travel = !categorySettings.travel;
+    localStorage.setItem("categorySettings", JSON.stringify(categorySettings));
   });
 
 document
