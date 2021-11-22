@@ -40,7 +40,7 @@ array.forEach((Element) => {
   document.querySelector("#main").append(section);
   section.innerHTML += `
   <article class="collaps">
-    <div class="health-category">
+    <div class="inbox-category">
        <i class="fas fa-box"></i> 
        <h3 class="article-heading">${Element}</h3> 
     </div>
@@ -71,5 +71,6 @@ array.forEach((Element) => {
 </article>`;
         }
       });
+      fold();
     });
 });
