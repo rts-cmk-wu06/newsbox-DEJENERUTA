@@ -9,6 +9,7 @@ html,
 body,
 main {
 	height: 100%;
+	background-color: #e5e5e5;
 }
 img {
 	width: 100%;
@@ -45,6 +46,7 @@ form {
 	width: 100%;
 	padding: 30px;
 	border-bottom: 1px solid gray;
+	background-color: #ffffff;
 }
 .search-container {
 	display: block;
@@ -140,35 +142,18 @@ input#search-bar {
 }
 /* archive page */
 #container {
-	width: 400px;
-	height: 600px;
+	width: 375px;
+	height: 812px;
 	margin: 0 auto;
+	background-color: #ffffff;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	align-items: center;
 	justify-content: center;
 	overflow: hidden;
+	border-radius: 7px;
 	touch-action: none;
-}
-.item {
-	width: 400px;
-	position: relative;
-	touch-action: none;
-	user-select: none;
-	display: block;
-	margin: 10px;
-	padding: 10px 0;
-}
-.item > button {
-	width: 120px;
-	height: 150px;
-	content: "delet";
-	background-color: #d95454;
-	position: absolute;
-	right: -120px;
-	top: 0;
-	cursor: pointer;
 }
 .archive-category {
 	display: flex;
@@ -187,6 +172,52 @@ input#search-bar {
 	color: #d97d54;
 	align-self: center;
 }
+.title {
+	color: #334856;
+}
+.desc {
+	color: #6e8ca0;
+}
+.item {
+	color: #fff;
+	text-align: center;
+	width: 400px;
+	height: 150px;
+	margin: 10px;
+	display: block;
+	padding: 10px 0;
+	position: relative;
+
+	box-sizing: border-box;
+	touch-action: none;
+	user-select: none;
+}
+.item:hover {
+	cursor: pointer;
+}
+.item > button {
+	font-size: 18px;
+	color: #fff;
+	background-color: #d95454;
+	width: 120px;
+	text-align: center;
+	box-sizing: border-box;
+	position: absolute;
+	right: -120px;
+	top: 2px 0;
+	cursor: pointer;
+}
+.item > h3 {
+	padding: 5px;
+	text-align: left;
+}
+.item > p {
+	font-size: 14px;
+	margin-top: 5px;
+	padding: 0 5px;
+	text-align: left;
+}
+
 /* setting page */
 
 .setting {

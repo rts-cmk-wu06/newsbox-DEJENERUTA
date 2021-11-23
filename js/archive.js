@@ -1,3 +1,24 @@
+if (localStorage.getItem("categorySettings") === null) {
+  localStorage.setItem(
+    "categorySettings",
+    JSON.stringify({
+      world: true,
+      health: true,
+      business: true,
+      sport: true,
+      travel: true,
+    })
+  );
+}
+const categorySettings = JSON.parse(localStorage.getItem("categorySettings"));
+if (localStorage.getItem("darkModeSetting") === null) {
+  localStorage.setItem("darkModeSetting", "off");
+}
+let darkModeSetting = localStorage.getItem("darkModeSetting") === "on";
+if (darkModeSetting) {
+  document.querySelector("body").classList.add("dark");
+};
+
 let container = document.querySelector("#container");
 let actionButton = document.querySelector(".item button");
 let actionButtonWidth = actionButton.offsetWidth;
@@ -74,8 +95,8 @@ function setBack(xPos, yPos, el) {
   el.style.webkitTransition = "transform .5s ease";
 }
 function deleteItem(item) {
-  var del = document.querySelector('.item[data-mid="' + item + '"');
-  del.style.display = "none";
+  let del = document.querySelector('.item[data-mid="' + item + '"');
+   del.style.display = "none";
 }
 
 
