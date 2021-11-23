@@ -179,18 +179,24 @@ input#search-bar {
 	color: #6e8ca0;
 }
 .item {
-	color: #fff;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	transition: 0.15s;
+
+	/* color: #fff;
 	text-align: center;
 	width: 400px;
 	height: 150px;
 	margin: 10px;
 	display: block;
 	padding: 10px 0;
-	position: relative;
+	
 
 	box-sizing: border-box;
 	touch-action: none;
-	user-select: none;
+	user-select: none; */
 }
 .item:hover {
 	cursor: pointer;
