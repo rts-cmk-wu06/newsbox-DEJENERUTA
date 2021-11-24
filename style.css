@@ -118,6 +118,8 @@ input#search-bar {
 	grid-row-start: 1;
 	grid-row-end: 2;
 	transition: 0.15s;
+	z-index: 1;
+	background-color: #fff;
 }
 .deleteItem {
 	grid-column-start: 2;

@@ -1,92 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+			integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+			crossorigin="anonymous"
+		/>
+		<!-- fontawesom link -->
+		<link rel="stylesheet" href="style.css" />
+		<title>NEWS BOX PROJECT</title>
+	</head>
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-      crossorigin="anonymous" />
-    <!-- fontawesom link -->
-    <link rel="stylesheet" href="style.css" />
-    <title>NEWS BOX PROJECT</title>
-  </head>
-
-  <body>
-    <div id="wrapper">
-      <header>
-        <nav>
-          <ul>
-            <li>
-              <i class="fas fa-angle-left angle-icon"></i>
-            </li>
-            <li>
-              <a href="">Archive</a>
-            </li>
-            <a href="settings.html">
-              <li>
-                <i class="fas fa-cog"></i>
-              </li>
-            </a>
-          </ul>
-        </nav>
-      </header>
-      <!-- header -->
-      <main>
-        <form class="search-container">
-          <input type="text" id="search-bar" placeholder="Search news" />
-          <i class="fas fa-search search-icon"></i>
-        </form>
-        <section>
-          <div id=container>
-            <article class="archive-collaps ">
-              <div class="archive-category ">
-                <i class="fas fa-box"></i>
-                <h3 class="article-heading">SPORT</h3>
-              </div>
-              <div><i class="fas fa-angle-down angle-icon"></i></div>
-            </article>
-            <div class="item" data-mid="1">
-              <article class="article-about-surfing ">
-                <div class="item">
-                  <h3 class="title">Headline</h3>
-                  <p class="desc">
-                    Surfing is a surface water sport in which the wave rider, referred
-                    to as...
-                  </p>
-                  <button data-mid="1">delete</button>
-                </div>
-              </article>
-            </div>
-            <div class="item" data-mid="2">
-              <article class="archive-collaps">
-                <div class="archive-category">
-                  <i class="fas fa-box"></i>
-                  <h3 class="article-heading">TRAVEL</h3>
-                </div>
-                <div><i class="fas fa-angle-down angle-icon"></i></div>
-              </article>
-              <button data-mid="2">delete</button>
-            </div>
-            <div class="item" data-mid="3">
-              <article class="article-about-surfing ">
-                <div class="item">
-                  <h3 class="title">Headline</h3>
-                  <p class="desc">
-                    Surfing is a surface water sport in which the wave rider, referred
-                    to as...
-                  </p>
-                  <button data-mid="3">delete</button>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-      </main>
-      <!-- main -->
-      <script src="js/archive.js"></script>
-    </div>
-  </body>
-
+	<body>
+		<div id="wrapper">
+			<header>
+				<nav>
+					<ul>
+						<li>
+							<i class="fas fa-angle-left angle-icon"></i>
+						</li>
+						<li>
+							<a href="">Archive</a>
+						</li>
+						<a href="settings.html">
+							<li>
+								<i class="fas fa-cog"></i>
+							</li>
+						</a>
+					</ul>
+				</nav>
+			</header>
+			<!-- header -->
+			<main>
+				<form class="search-container">
+					<input type="text" id="search-bar" placeholder="Search news" />
+					<i class="fas fa-search search-icon"></i>
+				</form>
+				<section>
+					<div id="container">
+						<article class="archive-collaps">
+							<div class="archive-category">
+								<i class="fas fa-box"></i>
+								<h3 class="article-heading">SPORT</h3>
+							</div>
+							<div>
+								<i class="fas fa-angle-down angle-icon accordion__button"></i>
+							</div>
+						</article>
+						<div class="item" data-mid="1">
+							<article class="article-about-surfing">
+								<div class="item">
+									<h3 class="title">Headline</h3>
+									<p class="desc">
+										Surfing is a surface water sport in which the wave rider,
+										referred to as...
+									</p>
+									<button data-mid="1">delete</button>
+								</div>
+							</article>
+						</div>
+						<div class="item" data-mid="2">
+							<article class="archive-collaps">
+								<div class="archive-category">
+									<i class="fas fa-box"></i>
+									<h3 class="article-heading">TRAVEL</h3>
+								</div>
+								<div><i class="fas fa-angle-down angle-icon"></i></div>
+							</article>
+							<button data-mid="2">delete</button>
+						</div>
+						<div class="item" data-mid="3">
+							<article class="article-about-surfing">
+								<div class="item">
+									<h3 class="title">Headline</h3>
+									<p class="desc">
+										Surfing is a surface water sport in which the wave rider,
+										referred to as...
+									</p>
+									<button data-mid="3">delete</button>
+								</div>
+							</article>
+						</div>
+					</div>
+				</section>
+			</main>
+			<!-- main -->
+			<script src="js/archive.js"></script>
+		</div>
+	</body>
 </html>
