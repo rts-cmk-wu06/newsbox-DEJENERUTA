@@ -1,5 +1,5 @@
-let recycle = JSON.parse(localStorage.getItem("deleteItem"))
-	? JSON.parse(localStorage.getItem("deleteItem"))
+let recycle = localStorage.getItem("cards")
+	? JSON.parse(localStorage.getItem("cards"))
 	: [];
 
 let swipeItem = document.querySelector(".swipeItem");

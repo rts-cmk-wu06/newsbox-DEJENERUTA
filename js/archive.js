@@ -10,8 +10,28 @@ if (localStorage.getItem("categorySettings") === null) {
 		})
 	);
 }
+recycle = localStorage.getItem("cards")
+	? JSON.parse(localStorage.getItem("cards"))
+	: [];
+/* const array = ["world", "health", "business", "sports", "travel"]; */
+function shortenArr(arr) {
+	const filtered = [];
 
-const array = ["world", "health", "business", "sports", "travel"];
+	arr.forEach((item) => {
+		if (!filtered.includes(item)) filtered.push(item);
+	});
+
+	return filtered;
+}
+const sections = [];
+
+recycle.forEach((card) => sections.push(card.section));
+
+let array = shortenArr(sections);
+
+const idArray = [];
+
+recycle.forEach((card) => idArray.push(card.id));
 array.forEach((Element) => {
 	let section = document.createElement("section");
 	document.querySelector("#main").append(section);
@@ -34,7 +54,7 @@ array.forEach((Element) => {
 			const data = response.data;
 			console.log(data.results);
 			data.results.forEach((article) => {
-				if (article.section != "admin" && article.multimedia) {
+				if (article.section != "admin" && idArray.includes(article.short_url)) {
 					section.innerHTML += ` <article class="article-about-surfing card" id="${article.short_url}" data-section="${article.section}">
           <div class="swipeItem">
           <img src="${article.multimedia[0].url}" class="images">

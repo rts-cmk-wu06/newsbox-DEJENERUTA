@@ -61,7 +61,11 @@ array.forEach((Element) => {
 					article.multimedia &&
 					article.abstract
 				) {
-					section.innerHTML += ` <article class="article-about-surfing card" id="${article.short_url}" data-section="${article.section}">
+					section.innerHTML += ` <article class="article-about-surfing card" id="${
+						article.short_url
+					}" data-section="${
+						section.querySelector(".article-heading").textContent
+					}">
  <div class="swipeItem">
  <img src="${article.multimedia[0].url}" class="images">
  <div class="card-container">
