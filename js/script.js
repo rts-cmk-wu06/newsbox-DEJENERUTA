@@ -41,7 +41,7 @@ array.forEach((Element) => {
 	section.innerHTML += `
   <article class="collaps">
     <div class="inbox-category">
-      <img class="diamond" src="assets/icn_surfing (1).svg">
+      <img class="diamond" src="assets/icn_surfing1.svg">
        <h3 class="article-heading">${Element}</h3> 
     </div>
     <div class="fold"><i class="fas fa-angle-down angleIcon  fa-2x"></i></div>

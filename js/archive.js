@@ -38,7 +38,7 @@ array.forEach((Element) => {
 	section.innerHTML += `
   <article class="archive-collaps">
     <div class="archive-category">
-       <i class="fas fa-box"></i> 
+    <img class="diamond" src="assets/icn_surfing1.svg">
        <h3 class="article-heading">${Element}</h3> 
     </div>
     <div class="fold"><i class="fas fa-angle-down angle-icon  fa-2x"></i></div>

@@ -14,9 +14,6 @@ img {
 	height: auto;
 	display: block;
 }
-#wrapper {
-	max-width: 1200px;
-}
 header {
 	width: 100%;
 }
@@ -69,7 +66,7 @@ input#search-bar {
 	right: -45px;
 }
 .diamond {
-	width: 100px;
+	width: 50px;
 }
 .images {
 	width: 75px;
@@ -102,8 +99,10 @@ input#search-bar {
 
 .inbox-category {
 	display: flex;
-	justify-content: space-between;
 	gap: 10px;
+	align-items: center;
+	justify-content: center;
+	align-items: center;
 }
 .inbox-category i {
 	color: #d97d54;
@@ -152,7 +151,8 @@ input#search-bar {
 /* archive page */
 .archive-category {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
+	align-items: center;
 	gap: 10px;
 }
 .archive-collaps {
@@ -199,8 +199,6 @@ main {
 	flex-direction: column;
 	gap: 20px;
 	background-color: #eceff0;
-	width: 375px;
-	margin: 0 auto;
 }
 .main-toggle-container {
 	background-color: #ffffff;
