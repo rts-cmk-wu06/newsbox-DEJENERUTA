@@ -10,11 +10,9 @@
 			integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
 			crossorigin="anonymous"
 		/>
-		<!-- fontawesom link -->
 		<link rel="stylesheet" href="style.css" />
 		<title>NEWS BOX PROJECT</title>
 	</head>
-
 	<body>
 		<div id="wrapper">
 			<header>
@@ -34,62 +32,54 @@
 					</ul>
 				</nav>
 			</header>
-			<!-- header -->
-			<main>
+			<main id="main">
 				<form class="search-container">
 					<input type="text" id="search-bar" placeholder="Search news" />
 					<i class="fas fa-search search-icon"></i>
 				</form>
-				<section>
+				<!-- 	<section>
 					<div id="container">
 						<article class="archive-collaps">
 							<div class="archive-category">
 								<i class="fas fa-box"></i>
 								<h3 class="article-heading">SPORT</h3>
 							</div>
-							<div>
-								<i class="fas fa-angle-down angle-icon accordion__button"></i>
-							</div>
+							<div><i class="fas fa-angle-down angle-icon"></i></div>
 						</article>
-						<div class="item" data-mid="1">
-							<article class="article-about-surfing">
-								<div class="item">
-									<h3 class="title">Headline</h3>
-									<p class="desc">
-										Surfing is a surface water sport in which the wave rider,
-										referred to as...
-									</p>
-									<button data-mid="1">delete</button>
-								</div>
-							</article>
-						</div>
-						<div class="item" data-mid="2">
-							<article class="archive-collaps">
-								<div class="archive-category">
-									<i class="fas fa-box"></i>
-									<h3 class="article-heading">TRAVEL</h3>
-								</div>
-								<div><i class="fas fa-angle-down angle-icon"></i></div>
-							</article>
-							<button data-mid="2">delete</button>
-						</div>
-						<div class="item" data-mid="3">
-							<article class="article-about-surfing">
-								<div class="item">
-									<h3 class="title">Headline</h3>
-									<p class="desc">
-										Surfing is a surface water sport in which the wave rider,
-										referred to as...
-									</p>
-									<button data-mid="3">delete</button>
-								</div>
-							</article>
-						</div>
+						<article class="article-about-surfing">
+							<h3 class="title">Headline</h3>
+							<p class="desc">
+								Surfing is a surface water sport in which the wave rider,
+								referred to as...
+							</p>
+						</article>
+						<article class="archive-collaps">
+							<div class="archive-category">
+								<i class="fas fa-box"></i>
+								<h3 class="article-heading">TRAVEL</h3>
+							</div>
+							<div><i class="fas fa-angle-down angle-icon"></i></div>
+						</article>
+						<article class="article-about-surfing">
+							<h3 class="title">Headline</h3>
+							<p class="desc">
+								Surfing is a surface water sport in which the wave rider,
+								referred to as...
+							</p>
+						</article>
 					</div>
-				</section>
+					<article class="article-about-surfing">
+						<h3 class="title">Headline</h3>
+						<p class="desc">
+							Surfing is a surface water sport in which the wave rider, referred
+							to as...
+						</p>
+					</article>
+				</section> -->
 			</main>
-			<!-- main -->
+			<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 			<script src="js/archive.js"></script>
+			<script src="js/slideToArchive.js"></script>
 		</div>
 	</body>
 </html>

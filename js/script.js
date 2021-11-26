@@ -41,12 +41,11 @@ array.forEach((Element) => {
 	section.innerHTML += `
   <article class="collaps">
     <div class="inbox-category">
-       <i class="fas fa-box"></i> 
+      <img class="diamond" src="assets/icn_surfing (1).svg">
        <h3 class="article-heading">${Element}</h3> 
     </div>
-    <div class="fold"><i class="fas fa-angle-down angle-icon  fa-2x"></i></div>
-  </article> 
- 
+    <div class="fold"><i class="fas fa-angle-down angleIcon  fa-2x"></i></div>
+  </article>
  `;
 	axios
 		.get(
@@ -57,17 +56,24 @@ array.forEach((Element) => {
 			const data = response.data;
 			console.log(data.results);
 			data.results.forEach((article) => {
-				if (article.section != "admin") {
-					section.innerHTML += ` <article class="article-about-surfing card">
+				if (
+					article.section != "admin" &&
+					article.multimedia &&
+					article.abstract
+				) {
+					section.innerHTML += ` <article class="article-about-surfing card" id="${article.short_url}" data-section="${article.section}">
  <div class="swipeItem">
+ <img src="${article.multimedia[0].url}" class="images">
+ <div class="card-container">
      <h3 class="title">${article.title}</h3>
      <p class="desc">
-    ${article.abstract}
-    </p>
-</div>
+     ${article.abstract}
+     </p>
+   </div>
+  </div>
 <div class="deleteItem" style="height: 100px; background-color: #87bcbf">
  <i class="fas fa-box"></i>
-</div> 
+</div>
 </article>`;
 				}
 			});
