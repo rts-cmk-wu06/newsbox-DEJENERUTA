@@ -41,7 +41,7 @@ array.forEach((Element) => {
     <img class="diamond" src="assets/icn_surfing1.svg">
        <h3 class="article-heading">${Element}</h3> 
     </div>
-    <div class="fold"><i class="fas fa-angle-down angle-icon  fa-2x"></i></div>
+    <i class="fas fa-angle-down angle-icon fold fa-2x"></i>
   </article> 
  
  `;

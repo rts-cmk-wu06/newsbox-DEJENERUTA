@@ -8,7 +8,7 @@ let touchCordinateMove;
 let touchCordinateEnd;
 let touchParentElement;
 let touchElement;
-let trash = recycle;
+let archive = recycle;
 
 document.querySelector("main").addEventListener("touchstart", (e) => {
 	if (e.target.parentElement.classList.contains("card-container")) {
@@ -45,9 +45,9 @@ document.querySelector("main").addEventListener("touchstart", (e) => {
 				id: touchParentElement.id,
 				section: touchParentElement.getAttribute("data-section"),
 			};
-			trash = trash.filter((item) => userObject.id != item.id);
-			if (trash.length > 0) {
-				localStorage.setItem("cards", JSON.stringify(trash));
+			archive = archive.filter((item) => userObject.id != item.id);
+			if (archive.length > 0) {
+				localStorage.setItem("cards", JSON.stringify(archive));
 			} else {
 				localStorage.removeItem("cards");
 			}
@@ -59,5 +59,20 @@ document.querySelector("main").addEventListener("touchstart", (e) => {
 				touchParentElement.remove();
 			}, 900);
 		};
+	} else if (e.target.classList.contains("fold")) {
+		let content = e.target.closest("section").querySelectorAll(".card");
+		content.forEach((card) => {
+			if (card.style.height) {
+				card.style.removeProperty("height");
+				card.style.removeProperty("border");
+				card.style.removeProperty("opacity");
+				e.target.style.transform = "rotate(0deg)";
+			} else {
+				card.style.height = 0;
+				card.style.border = 0;
+				card.style.opacity = 0;
+				e.target.style.transform = "rotate(-90deg)";
+			}
+		});
 	}
 });

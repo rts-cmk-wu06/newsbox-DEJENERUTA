@@ -38,13 +38,13 @@ if (categorySettings.travel) {
 array.forEach((Element) => {
 	let section = document.createElement("section");
 	document.querySelector("#main").append(section);
-	section.innerHTML += `
+	section.innerHTML += ` 
   <article class="collaps">
     <div class="inbox-category">
       <img class="diamond" src="assets/icn_surfing1.svg">
        <h3 class="article-heading">${Element}</h3> 
     </div>
-    <div class="fold"><i class="fas fa-angle-down angleIcon  fa-2x"></i></div>
+    <i class="fas fa-angle-down angleIcon fold fa-2x"></i>
   </article>
  `;
 	axios
@@ -54,7 +54,6 @@ array.forEach((Element) => {
 
 		.then((response) => {
 			const data = response.data;
-			console.log(data.results);
 			data.results.forEach((article) => {
 				if (
 					article.section != "admin" &&
@@ -66,7 +65,7 @@ array.forEach((Element) => {
 					}" data-section="${
 						section.querySelector(".article-heading").textContent
 					}">
- <div class="swipeItem">
+ <div class="swipeItem animate__animated">
  <img src="${article.multimedia[0].url}" class="images">
  <div class="card-container">
      <h3 class="title">${article.title}</h3>
