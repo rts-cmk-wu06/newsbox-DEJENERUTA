@@ -55,7 +55,7 @@ array.forEach((Element) => {
 			console.log(data.results);
 			data.results.forEach((article) => {
 				if (article.section != "admin" && idArray.includes(article.short_url)) {
-					section.innerHTML += ` <article class="article-about-surfing card" id="${article.short_url}" data-section="${article.section}">
+					section.innerHTML += ` <article class="article-about-surfing card animate__animated" id="${article.short_url}" data-section="${article.section}">
           <div class="swipeItem">
           <img src="${article.multimedia[0].url}" class="images">
           <div class="card-container">

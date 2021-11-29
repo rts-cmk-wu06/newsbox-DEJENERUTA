@@ -60,12 +60,12 @@ array.forEach((Element) => {
 					article.multimedia &&
 					article.abstract
 				) {
-					section.innerHTML += ` <article class="article-about-surfing card" id="${
+					section.innerHTML += ` <article class="article-about-surfing card animate__animated" id="${
 						article.short_url
 					}" data-section="${
 						section.querySelector(".article-heading").textContent
 					}">
- <div class="swipeItem animate__animated">
+ <div class="swipeItem">
  <img src="${article.multimedia[0].url}" class="images">
  <div class="card-container">
      <h3 class="title">${article.title}</h3>
