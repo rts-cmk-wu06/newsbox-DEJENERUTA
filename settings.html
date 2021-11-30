@@ -18,15 +18,16 @@
 	</head>
 
 	<body>
+		<div id="tutorial-overlay"></div>
 		<div id="wrapper">
 			<header>
 				<nav>
 					<ul>
-						<a href="index.html">
+						<a href="./index.html">
 							<li>
 								<i class="fas fa-angle-left angle-icon"></i></li
 						></a>
-						<a href="seteting.html">
+						<a href="./seteting.html">
 							<li class="setting">
 								<a href="">News settings</a>
 							</li>
@@ -36,6 +37,10 @@
 			</header>
 			<!-- header -->
 			<main>
+				<div class="tutorial-message message-5">
+					<p>here you can configure your categories</p>
+					<button type="button">finish</button>
+				</div>
 				<h1 class="setting-title">Manage</h1>
 				<p class="setting-sub-title">Categories</p>
 				<div class="main-toggle-container">
@@ -85,8 +90,8 @@
 			<!-- footer -->
 			<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 			<!-- axios link -->
-			<script src="js/setting.js"></script>
-			<!-- <script src="js/gulpfile.js"></script> -->
+			<script src="./js/setting.js"></script>
+			<script src="./js/swipeDownToRefresh.js"></script>
 		</div>
 	</body>
 </html>

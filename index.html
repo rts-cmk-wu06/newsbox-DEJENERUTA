@@ -16,28 +16,34 @@
 		/>
 		<!-- fontawesom link -->
 		<!-- <link rel="stylesheet" href="sass/main.scss" /> -->
-		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="./css/main.css" />
 		<!-- css link -->
 		<title>NEWS BOX PROJECT</title>
 	</head>
 
 	<body>
+		<div id="tutorial-overlay"></div>
 		<div id="wrapper">
 			<header>
 				<nav>
 					<ul>
-						<a href="archive.html">
-							<li>
-								<i class="fas fa-box"></i></li
-						></a>
+						<li>
+							<a href="./archive.html">
+								<i class="fas fa-box"></i>
+							</a>
+							<div class="tutorial-message message-2">
+								<p>here you can go to archive page</p>
+								<button type="button">next</button>
+							</div>
+						</li>
 						<li>
 							<a href="">Newsbox</a>
 						</li>
-						<a href="settings.html">
-							<li>
+						<li>
+							<a href="./settings.html">
 								<i class="fas fa-cog"></i>
-							</li>
-						</a>
+							</a>
+						</li>
 					</ul>
 				</nav>
 			</header>
@@ -46,7 +52,12 @@
 				<form class="search-container">
 					<input type="text" id="search-bar" placeholder="Search news" />
 					<i class="fas fa-search search-icon"></i>
+					<div class="tutorial-message message-1">
+						<p>here you can swipe left to archive</p>
+						<button type="button">next</button>
+					</div>
 				</form>
+
 				<!--  <section class="animate__animated">
           <article>
             <div class="inbox-category">
@@ -112,8 +123,9 @@
 			</main>
 			<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 			<!-- axios link -->
-			<script src="js/script.js"></script>
-			<script src="js/slideToInbox.js"></script>
+			<script src="./js/swipeDownToRefresh.js"></script>
+			<script src="./js/script.js"></script>
+			<script src="./js/slideToInbox.js"></script>
 		</div>
 	</body>
 </html>

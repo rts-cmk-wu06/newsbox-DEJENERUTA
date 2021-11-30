@@ -18,22 +18,27 @@
 		<title>NEWS BOX PROJECT</title>
 	</head>
 	<body>
+		<div id="tutorial-overlay"></div>
 		<div id="wrapper">
 			<header>
 				<nav>
 					<ul>
-						<a href="index.html"
+						<a href="./index.html"
 							><li>
 								<i class="fas fa-angle-left angle-icon"></i></li
 						></a>
 						<li>
 							<a href="">Archive</a>
 						</li>
-						<a href="settings.html">
-							<li>
+						<li>
+							<a href="./settings.html">
 								<i class="fas fa-cog"></i>
-							</li>
-						</a>
+							</a>
+							<div class="tutorial-message message-4">
+								<p>here you can go to the setting page</p>
+								<button type="button">next</button>
+							</div>
+						</li>
 					</ul>
 				</nav>
 			</header>
@@ -41,6 +46,10 @@
 				<form class="search-container">
 					<input type="text" id="search-bar" placeholder="Search news" />
 					<i class="fas fa-search search-icon"></i>
+					<div class="tutorial-message message-3">
+						<p>here you can swipe left to delete</p>
+						<button type="button">next</button>
+					</div>
 				</form>
 				<!-- 	<section>
 					<div id="container">
@@ -83,8 +92,10 @@
 				</section> -->
 			</main>
 			<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-			<script src="js/archive.js"></script>
-			<script src="js/slideToArchive.js"></script>
+			<script src="./js/archive.js"></script>
+			<script src="./js/feature.js"></script>
+			<script src="./js/slideToArchive.js"></script>
+			<script src="./js/swipeDownToRefresh.js"></script>
 		</div>
 	</body>
 </html>

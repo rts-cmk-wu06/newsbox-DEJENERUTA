@@ -26,10 +26,29 @@ main {
 	height: 100%;
 	background-color: #e5e5e5;
 }
+
 img {
 	width: 100%;
 	height: auto;
 	display: block;
+}
+#tutorial-overlay{
+	position: fixed;
+	inset: 0;
+	background-color: #000000;
+	opacity: 50%;
+	z-index: 2;
+}
+.tutorial-message{
+	position: absolute;
+	background-color: #ffffff;
+	color: #000;
+	z-index: 3;
+	padding: 10px;
+  border-radius: 5px;
+}
+.message-4{
+	right: 0;
 }
 header {
 	width: 100%;

@@ -13,7 +13,6 @@ if (localStorage.getItem("categorySettings") === null) {
 recycle = localStorage.getItem("cards")
 	? JSON.parse(localStorage.getItem("cards"))
 	: [];
-/* const array = ["world", "health", "business", "sports", "travel"]; */
 function shortenArr(arr) {
 	const filtered = [];
 
@@ -92,3 +91,27 @@ if (localStorage.getItem("archiveCategory") === null) {
 	);
 }
 const archiveCategory = JSON.parse(localStorage.getItem("archiveCategory"));
+
+let tutorialCompleted = localStorage.getItem("tutorialCompleted") === "true";
+if (tutorialCompleted) {
+	document
+		.querySelectorAll("#tutorial-overlay, .tutorial-message")
+		.forEach((element) => {
+			element.style.display = "none";
+		});
+} else {
+	document.querySelector(".tutorial-message.message-4").style.display = "none";
+	document
+		.querySelector(".tutorial-message.message-3 button")
+		.addEventListener("click", () => {
+			document.querySelector(".tutorial-message.message-3").style.display =
+				"none";
+			document.querySelector(".tutorial-message.message-4").style.display =
+				"block";
+		});
+	document
+		.querySelector(".tutorial-message.message-4 button")
+		.addEventListener("click", () => {
+			window.location.replace("./settings.html");
+		});
+}

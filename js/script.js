@@ -82,3 +82,27 @@ array.forEach((Element) => {
 			});
 		});
 });
+
+let tutorialCompleted = localStorage.getItem("tutorialCompleted") === "true";
+if (tutorialCompleted) {
+	document
+		.querySelectorAll("#tutorial-overlay, .tutorial-message")
+		.forEach((element) => {
+			element.style.display = "none";
+		});
+} else {
+	document.querySelector(".tutorial-message.message-2").style.display = "none";
+	document
+		.querySelector(".tutorial-message.message-1 button")
+		.addEventListener("click", () => {
+			document.querySelector(".tutorial-message.message-1").style.display =
+				"none";
+			document.querySelector(".tutorial-message.message-2").style.display =
+				"block";
+		});
+	document
+		.querySelector(".tutorial-message.message-2 button")
+		.addEventListener("click", () => {
+			window.location.replace("./archive.html");
+		});
+}

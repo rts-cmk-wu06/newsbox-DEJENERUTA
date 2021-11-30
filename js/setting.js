@@ -74,3 +74,19 @@ document
 			document.querySelector("body").classList.remove("dark");
 		}
 	});
+
+let tutorialCompleted = localStorage.getItem("tutorialCompleted") === "true";
+if (tutorialCompleted) {
+	document
+		.querySelectorAll("#tutorial-overlay, .tutorial-message")
+		.forEach((element) => {
+			element.style.display = "none";
+		});
+} else {
+	document
+		.querySelector(".tutorial-message.message-5 button")
+		.addEventListener("click", () => {
+			localStorage.setItem("tutorialCompleted", "true");
+			window.location.replace("./index.html");
+		});
+}
