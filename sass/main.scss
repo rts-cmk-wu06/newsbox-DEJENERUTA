@@ -4,7 +4,7 @@
 header {
 	width: 100%;
 	border-bottom: 1px solid #334856;
-	background-color: #fff;
+	/* 	background-color: #fff; */
 
 	nav {
 		ul {
@@ -29,7 +29,7 @@ html,
 body,
 main {
 	height: 100%;
-	background-color: #e5e5e5;
+	/* 	background-color: #e5e5e5; */
 }
 
 img {
@@ -87,8 +87,8 @@ nav ul li a {
 .archived-number {
 	position: relative;
 	&::after {
-		background-color: red;
-		color: green;
+		background-color: #87bcbf;
+		color: #fff;
 		content: attr(data-text);
 		width: 20px;
 		height: 20px;
@@ -105,7 +105,7 @@ form {
 	width: 100%;
 	padding: 30px;
 	border-bottom: 1px solid gray;
-	background-color: #ffffff;
+	/* 	background-color: #ffffff; */
 }
 
 .search-container {
@@ -163,7 +163,7 @@ input#search-bar {
 	align-items: center;
 	padding: 5px;
 	border-bottom: 1px solid gray;
-	background-color: #fff;
+	/* 	background-color: #fff; */
 }
 
 .article-heading,
@@ -171,6 +171,7 @@ input#search-bar {
 	color: #334856;
 	align-self: center;
 	margin-right: 20px;
+	font-size: 30px;
 }
 
 .inbox-category {
@@ -257,11 +258,16 @@ input#search-bar {
 	color: #334856;
 	font-size: 15px;
 	font-weight: bold;
-	padding: 10px;
+	margin-top: 5px;
+}
+.title:hover {
+	background-color: green;
 }
 
 .desc {
 	color: #6e8ca0;
+	font-size: 14px;
+	font-weight: normal;
 }
 
 /* setting page */
@@ -291,7 +297,7 @@ main {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	background-color: #eceff0;
+	/* background-color: #eceff0; */
 }
 
 .main-toggle-container {
@@ -352,8 +358,8 @@ input[type="checkbox"]:checked + .toggle-wrapper > .toggle {
 }
 
 body.dark {
-	background-color: black;
-	color: white;
+	background-color: #000;
+	color: #fff;
 }
 
 body.dark .toggle-button-wrapper {
