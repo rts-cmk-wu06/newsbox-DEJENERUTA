@@ -1,7 +1,9 @@
 let recycle = localStorage.getItem("cards")
 	? JSON.parse(localStorage.getItem("cards"))
 	: [];
-
+document
+	.querySelector(".archived-number")
+	.setAttribute("data-text", recycle.length);
 let swipeItem = document.querySelector(".swipeItem");
 let touchCordinateStart;
 let touchCordinateMove;
@@ -41,6 +43,9 @@ document.querySelector("main").addEventListener("touchstart", (e) => {
 		});
 
 		touchParentElement.querySelector(".deleteItem").onclick = () => {
+			document
+				.querySelector(".archived-number")
+				.setAttribute("data-text", recycle.length);
 			let userObject = {
 				id: touchParentElement.id,
 				section: touchParentElement.getAttribute("data-section"),

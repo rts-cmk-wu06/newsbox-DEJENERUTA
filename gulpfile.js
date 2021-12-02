@@ -11,5 +11,18 @@ gulp.task("styles", () => {
 function watchTask() {
 	watch(["sass/**/*.scss", "js/**/*.js", "*.html"], gulp.series(["styles"]));
 }
+//gulp-babel
+const babel = require("gulp-babel");
 
-gulp.task("default", gulp.series(["styles"], watchTask));
+gulp.task("buildScript", () =>
+	gulp
+		.src("js/**/*.js")
+		.pipe(
+			babel({
+				presets: ["@babel/preset-env"],
+			})
+		)
+		.pipe(gulp.dest("dist"))
+);
+
+gulp.task("default", gulp.series(["styles"], ["buildScript"], watchTask));
