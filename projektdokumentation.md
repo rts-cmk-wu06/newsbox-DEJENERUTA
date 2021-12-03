@@ -28,7 +28,7 @@
 "@babel/core": "^7.16.0",
 "@babel/preset-env": "^7.16.0",
 "gulp": "^4.0.2",
-"gulp-babel": "^8.0.0", // vil kompilere mit javascript (ES6-syntaks) til gammel js-syntaks, som let til var
+"gulp-babel": "^8.0.0", // vil compile mit javascript (ES6-syntaks) til gammel js-syntaks, som let til var
 "gulp-sass": "^5.0.0", // vil kompilere min .scss til normal css-fil
 "gulp-watch": "^5.0.1", //vil se om mine filer kompileres
 "sass": "^1.43.4"
