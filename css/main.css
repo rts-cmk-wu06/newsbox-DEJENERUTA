@@ -100,9 +100,16 @@ header nav ul li a {
 }
 
 form {
-  width: 100%;
-  padding: 30px;
+  width: 80%;
+  margin: 30px;
   border-bottom: 1px solid gray;
+  border: 1px solid #d0cfce;
+  outline: none;
+  background-color: #e5e5e5;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
 }
 form .search-container {
   display: block;
@@ -111,20 +118,16 @@ form input#search-bar {
   margin: 0 auto;
   width: 100%;
   height: 45px;
-  padding: 0 20px;
   font-size: 1rem;
-  border: 1px solid #d0cfce;
-  outline: none;
+  border: none;
   background-color: #e5e5e5;
-  border-radius: 5px;
 }
-form .search-icon {
-  position: relative;
-  float: right;
-  width: 75px;
-  height: 75px;
-  top: -30px;
-  right: -45px;
+form input#search-bar:focus {
+  outline: none;
+}
+
+section {
+  border-top: 1px solid gray;
 }
 
 .images {
@@ -176,6 +179,8 @@ form .search-icon {
 }
 .inbox-category .diamond {
   width: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
 }
 
 .angle-icon {
@@ -229,6 +234,11 @@ form .search-icon {
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+.archive-category .diamond {
+  width: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
 }
 
 .archive-collaps {

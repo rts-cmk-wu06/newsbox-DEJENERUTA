@@ -29,8 +29,8 @@
 "@babel/preset-env": "^7.16.0",
 "gulp": "^4.0.2",
 "gulp-babel": "^8.0.0", // vil compile mit javascript (ES6-syntaks) til gammel js-syntaks, som let til var
-"gulp-sass": "^5.0.0", // vil kompilere min .scss til normal css-fil
-"gulp-watch": "^5.0.1", //vil se om mine filer kompileres
+"gulp-sass": "^5.0.0", // vil compile min css stylesheets til scss syntax
+"gulp-watch": "^5.0.1", //Vil monitorere mine kildefiler og lytte på ændringer.
 "sass": "^1.43.4"
 
 ---
@@ -63,6 +63,17 @@ Du kan vise kode i markdown på følgende måder:
 (indtil videre går alt godt)
 
 ```js
+INBOX PAGE
+//her hentede jeg data fra api og præsentere ved at bruge javascript axios
+axios
+		.get(
+			`https://api.nytimes.com/svc/topstories/v2/${Element}.json?api-key=cLmzjWMAwmrqrU4DGnsDKAB1xXI28GvF`
+		)
+
+		.then((response) => {
+			const data = response.data}); ...
+
+ARCHIVE PAGE
 // denne kode viser, hvor mange elementer der findes på arkivsiden
 document
 	.querySelector(".archived-number")
@@ -92,6 +103,15 @@ touchParentElement.querySelector(".deleteItem").onclick = () => {
 		touchParentElement.remove();
 	}, 900);
 };
+SETTING PAGE
+// dark mode code
+if (localStorage.getItem("darkModeSetting") === null) {
+	localStorage.setItem("darkModeSetting", "off");
+}
+let darkModeSetting = localStorage.getItem("darkModeSetting") === "on";
+if (darkModeSetting) {
+	document.querySelector("body").classList.add("dark");
+} ...
 ```
 
 ```css
